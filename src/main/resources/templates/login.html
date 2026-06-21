@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ログイン</title>
+
+    <!-- 共通 Bootstrap -->
+    <th:block th:replace="~{common/sourceList :: sourceList}"></th:block>
+
+    <!-- 独自CSS（最小限） -->
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+<body class="bg-light">
+
+<div class="container">
+    <div class="row justify-content-center mt-5">
+        <div class="col-12 col-sm-10 col-md-6 col-lg-5">
+
+            <form th:action="@{/login}" method="post">
+
+                <!-- ユーザID -->
+                <div class="row mb-3 align-items-center">
+                    <label class="col-4 col-form-label">
+                        ユーザID
+                    </label>
+                    <div class="col-8">
+                        <input type="text"
+                               name="username"
+                               class="form-control"
+                               required>
+                    </div>
+                </div>
+
+                <!-- パスワード -->
+                <div class="row mb-3 align-items-center">
+                    <label class="col-4 col-form-label">
+                        パスワード
+                    </label>
+                    <div class="col-8">
+                        <input type="password"
+                               name="password"
+                               class="form-control"
+                               required>
+                    </div>
+                </div>
+
+                <div class="d-grid mt-4">
+                    <button type="submit" class="btn btn-primary">
+                        ログイン
+                    </button>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
