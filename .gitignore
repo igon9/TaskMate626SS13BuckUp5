@@ -33,7 +33,7 @@ build/
 .vscode/
 
 # jpackage出力
-TaskMate/
+/TaskMate/
 *.exe
 
 # ログ
